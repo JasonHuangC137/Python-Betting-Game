@@ -26,13 +26,18 @@ def parseBet(inp):
            new.pop(0) 
     return ret 
         
-def updateResult():
 
-def score(game):
-    for 
+
+def settleScore(game,winner):
+    for i in player:
+        for horse in player[i][game]:
+            if winner == horse:
+                #do the score 
+
 
 for game in range(2):
     placeBet()
-    updateResult()
-    score()
+    print("Which horse won the game?")
+    winner = input()
+    settleScore(game,winner)
 print("Game End, Winner is ",)    
