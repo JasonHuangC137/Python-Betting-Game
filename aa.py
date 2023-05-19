@@ -47,15 +47,15 @@ def settleScore(game,winner):
     with open("score.json", "w") as outfile:
        outfile.write(json_object)
 
-# for game in range(2):
-#     placeBet()
-#     print("Which horse won the game?")
-#     winner = input()
-#     settleScore(game,winner)
-# print("Game End, Winner is ",)    
+for game in range(2):
+    print("New Round",str(game+1))
+    placeBet()
+    print("Which horse won the game?")
+    winner = input()
+    settleScore(game,winner)
+    print ("----SCORE-----")
+    for i in score_list:
+        print (i," : ",score_list[i])
+print("Game Ended!")    
 
 
-placeBet()
-print("Winner ?")
-v =input()
-settleScore(0,v)
