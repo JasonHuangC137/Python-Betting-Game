@@ -2,17 +2,18 @@ import json
 player = {
 "joye":[],
 "darel":[],
-"clare":[]
+"clare":[],
+"ethen":[]
 }
 ratio = {
     "1":1,
     "2":6
 }
 score_list ={
-    "joye":10,
-    "darel":10,
-    "clare":10
 }
+for p in player:
+    score_list[p]=1000 #inicial number
+print (score_list)
 
 def placeBet():
     for o in player:
@@ -26,7 +27,7 @@ def placeBet():
  
 
 def parseBet(inp,o):
-    new = inp.split(" ")
+    new = inp.strip().split(" ")
     ret = {}
     while len(new)>=2:
            ret[new[0]]=int (new[1])
@@ -56,6 +57,7 @@ for game in range(2):
     print ("----SCORE-----")
     for i in score_list:
         print (i," : ",score_list[i])
+    print ("--------------")
 print("Game Ended!")    
 
 
