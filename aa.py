@@ -1,18 +1,27 @@
 import json
 player = {
-"joye":[],
-"darel":[],
-"clare":[],
-"ethen":[]
+"Joye":[],
+"Jessie":[],
+"Una":[], 
+"Katrina":[],
+"Wayne":[],
+"Joanna":[],
+"Jack":[]
 }
 ratio = {
-    "1":1,
-    "2":6
+    "1":2.1,
+    "2":3.5,
+    "3":4.8,
+    "4":4.2,
+    "5":15.8,
+    "6":12.8,
+    "7":18.7,
+    "8":115
 }
 score_list ={
 }
 for p in player:
-    score_list[p]=1000 #inicial number
+    score_list[p]=5000 #inicial number
 print (score_list)
 
 def placeBet():
@@ -48,7 +57,7 @@ def settleScore(game,winner):
     with open("score.json", "w") as outfile:
        outfile.write(json_object)
 
-for game in range(2):
+for game in range(10):
     print("New Round",str(game+1))
     placeBet()
     print("Which horse won the game?")
